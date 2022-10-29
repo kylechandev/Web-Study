@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝轮播图</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        .tb-promo .left,
+        .tb-promo .right {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .7);
+            border-radius: 0px 15px 15px 0px;
+        }
+
+        .tb-promo .left {
+            left: 0px;
+            border-radius: 0px 15px 15px 0px;
+        }
+
+        .tb-promo .right {
+            /* 如果一个盒子同时定义了left和right，则默认执行left属性；（上下同理，默认执行top属性） */
+            right: 0px;
+            border-radius: 15px 0px 0px 15px;
+        }
+
+        .dot {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -35px;
+            background-color: rgba(255, 255, 255, .3);
+            width: 70px;
+            height: 13px;
+            border-radius: 7px;
+        }
+
+        .dot ul li {
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            list-style: none;
+            font-size: 20px;
+            line-height: 13px;
+            text-align: center;
+            float: left;
+            border-radius: 50%;
+            margin: 3px;
+        }
+
+        .dot ul li:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tb-promo">
+        <img src="images/tb.jpg" alt="">
+
+        <a href="#" class="left"> &lt; </a>
+        <a href="#" class="right"> &gt; </a>
+
+        <div class="dot">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

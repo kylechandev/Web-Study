@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三大特性-优先级</title>
+
+    <style>
+        div {
+            color: pink!important;
+        }
+
+        .test {
+            color: red;
+        }
+
+        #demo {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 层叠性、继承性、优先级 -->
+
+    <!-- 如果选择器相同，则执行层叠行 -->
+    <!-- 如果选择器不同，则根据选择器的权重来执行 -->
+    <!-- 
+        选择器                  选择器权重
+        继承 / *                0,0,0,0
+        标签选择器               0,0,0,1
+        类选择器                 0,0,1,0
+        ID选择器                0,1,0,0
+        行内样式style            1,0,0,0
+        !important 重要的       无穷大
+     -->
+    <div class="test" id="demo" style="color: purple;">你笑起来真好看</div>
+
+    <!-- 特殊：a标签有系统默认的标签选择器 -->
+
+</body>
+
+</html>

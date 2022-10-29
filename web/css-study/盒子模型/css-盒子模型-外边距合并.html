@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距合并问题</title>
+
+    <style>
+        .damao, .ermao {
+           width: 200px; 
+           height: 100px;
+           background-color: pink;
+           text-align: center;
+        }
+        /* 外边距合并是取两个值中的较大者作为最终的margin值 */
+        /* 例如这里为100+200=200 */
+         /* 🌟 实际开发中，只给一个盒子添加margin值 */
+        .damao {
+            margin-bottom: 100px;
+        }
+        .ermao {
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="damao">大猫</div>
+    <div class="ermao">二猫</div>
+</body>
+</html>

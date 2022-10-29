@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 统一设置高度100px */
+        .box>div {
+            height: 100px;
+        }
+
+        .left {
+            float: left;
+            width: 100px;
+            background-color: red;
+        }
+
+        .center {
+            background-color: green;
+        }
+
+        .right {
+            float: right;
+            width: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left">left fixed</div>
+        <div class="right">right fixed</div>
+        <!-- 在html中，中间自适应的div一定要放到最后边，因为左右div浮动不占高度，如果把中间div放到前边或者中间，就会把浮动元素挤到下边去 -->
+        <div class="center">center flexable</div>
+    </div>
+</body>
+
+</html>

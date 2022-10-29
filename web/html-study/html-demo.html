@@ -1,0 +1,328 @@
+<!-- https://web.qianguyihao.com -->
+
+<!-- 快速生成Html骨架：输入"html:5"后回车 或者直接输入"!" -->
+<!-- 这种快速生成的语法是：Emmet语法，使用缩写来提高html/css的编写速度 -->
+
+<!-- 文档声明头 DocType Declaration，简称DTD，告知浏览器文档使用哪种HTML或者XHTMl规范 -->
+<!-- 在HTML5中极大的简化了DTD，也就是说HTML5中就没有XHTML了： -->
+<!DOCTYPE html>
+
+<!-- root标签 -->
+<!-- lang="en" 指定页面的语言，`zh-CN表`示中文 -->
+<html lang="en">
+<!-- 浏览器顶部 -->
+
+<head>
+	<!-- <meta>：提供有关页面的基本信息 -->
+	<meta charset="UTF-8" />
+	<!-- charset 字符集，表示网页的编码方式 -->
+	<!-- UTF-8（更臃肿、加载更慢） > gb2312 （更小巧，加载更快） -->
+	<!-- viewport 视口，width=device-width，表示视口宽度等于屏幕宽度 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="text/html; charset=UTF-8" />
+	<!-- 🌟 网页自动跳转 -->
+	<!-- < meta http-equiv="Refresh" content="秒数;跳转的文件或地址" >  -->
+	<!-- <meta http-equiv="Refresh" content="1;https://www.baidu.com"> -->
+	<meta name="Author" content="" />
+	<!-- 告诉搜索引擎，这个网页是干嘛的，能够提高搜索命中率 -->
+	<meta name="Keywords" content="网页关键字" />
+	<!-- 只要设置Description页面描述，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO（search engine optimization，搜索引擎优化） -->
+	<meta name="Description" content="页面描述" />
+
+	<!-- 浏览器中窗口显示的标题 -->
+	<title>HTML-STUDY</title>
+
+	<!-- 指定基础的路径，指定之后，所有的 a 链接都是以这个路径为基准 -->
+	<!-- <base href="https://yiyujizhang.cn/"> -->
+</head>
+
+<!-- 网页内容 -->
+
+<body link="red" alink="blue" vlink="green" text="black" leftmargin="12">
+	<!-- 文本级标签：只能放文字、图片、表单元素 -->
+	<!-- 容器级标签：可以放置任何东西，包括其他标签 -->
+
+	<!-- 
+		文本级标签：p、span、a、b、i、u、em。文本级标签里只能放文字、图片、表单元素。（a标签里不能放a和input）
+		容器级标签：div、h系列、li、dt、dd。容器级标签里可以放置任何东西。 
+	-->
+	
+
+	<!-- 使用name或id属性创建一个锚点，标签类型可以是任意的，可以让页面定位并跳转到这个锚点处 -->
+	<!-- name属性是HTML4.0以前使用的，id属性是HTML4.0后才开始使用。为了向前兼容，因此，name和id这两个属性都要写上，并且值是一样的 -->
+	<a name="name1">顶部</a> <br />
+	<p id="name2">顶部2</p>
+
+	<h1>一级标题-最大</h1>
+	<!-- 不推荐使用align。请使用样式替代它 -->
+	<h2 align="center">二级标题</h2>
+	<h3>三级标题</h3>
+	<h4>四级标题</h4>
+	<h5>五级标题</h5>
+	<h6>六级标题-最小</h6>
+
+	<!-- 段落标签 -->
+	<p>This is a paragraph</p>
+	<p>This is another paragraph</p>
+
+	<!-- 图片 -->
+	<!-- 🌟 如果要想保证图片等比例缩放，请只设置width和height中其中一个，可以是px值也可以是百分比值 -->
+	<!-- 本地图片 -->
+	<!-- ①、相对路径（只能写在开头）： -->
+	<!-- .代表当前目录 -->
+	<!-- ..代表上一层目录 -->
+	<!-- 例如： <img src="../2.jpg"> -->
+	<figure>
+		<!-- 使用 figure 搭配 figcaption 标签 为图片添加名称描述文本 -->
+		<img src="../../src/doge.jpeg" width="50" height="50" alt="doge" />
+		<figcaption>图片名称</figcaption>
+	</figure>
+	<!-- ②、绝对路径（包括盘符等完整图片路径） -->
+	<!-- ③、网络图片 -->
+	<img src="https://s4.ax1x.com/2022/02/17/HIHpND.jpg" width="100" alt="定义图片无法显示时的替代显示文字" title="鼠标悬停时显示的文本" />
+	<br />
+
+	<!-- 超链接 -->
+	<a href="html2.html" title="鼠标悬停链接显示文本" target="_blank">超链接-本地另一个html（新页面）</a>
+	<br />
+	<a href="https://yiyujizhang.cn/yiyujizhang">超链接-yiyujizhang.cn（在当前页面打开）</a>
+	<br />
+	<!-- mailto:邮箱 -->
+	<a href="mailto:kylec47@qq.com">邮件链接</a>
+	<br />
+	<!-- 定位锚点（注意要加上`#`符号） -->
+	<a href="#name2">回到顶部（锚点）</a>
+	<br />
+	<a href="#">空链接</a>
+	<!-- 使用`a`标签下载文件 -->
+	<a href="../src/doge.jpeg">下载文件</a>
+
+	<!-- 水平分隔线（horizontal rule）可以在视觉上将文档分隔成各个部分 -->
+	<!-- https://web.qianguyihao.com/01-HTML/04-HTML%E6%A0%87%E7%AD%BE%EF%BC%9A%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE.html#%E6%B0%B4%E5%B9%B3%E7%BA%BF%E6%A0%87%E7%AD%BE-hr -->
+	<hr align="center" size="2" noshade="noshade" width="20%" />
+
+	<!-- 换行 -->
+	<br />
+
+	<!-- 🌟重要 -->
+	<!-- <div> <span> 标签 -->
+	<!-- div标签： 可以把标签中的内容分割为独立的区块。必须单独占据一行。
+         span标签：和div的作用一致，但不换行。 -->
+	<!-- 这两个元素是专门为定义CSS样式而生的。或者说，DIV+CSS来实现各种样式 -->
+
+	<!-- div是容器级别标签 -->
+	<!-- 每个div独占一行，大盒子 -->
+	<div>div1</div>
+	<div>div2</div>
+
+	<!-- span是文本级别标签 -->
+	<!-- 一行可以有多个span，小盒子 -->
+	<span>span1</span>
+	<span>span2</span>
+
+	<p>
+		简介简介简介贾妮姐
+		<span>
+			<a href="">详细信息</a>
+			<a href="">购买</a>
+		</span>
+	</p>
+
+	<!-- “div+css”：div标签负责布局、结构、分块，css负责样式 -->
+	<div class="header">
+		<div class="logo"></div>
+		<div class="nav"></div>
+	</div>
+	<div class="content">
+		<div class="guanggao"></div>
+		<div class="dongxi"></div>
+	</div>
+	<div class="footer"></div>
+
+	<!-- 不建议使用，建议使用css布局来实现 -->
+	<center>
+		<p>水平居中显示center</p>
+	</center>
+
+	<pre>
+        掩饰预标签，基本用不着
+
+
+
+        pre可以保留空格和换行
+    </pre>
+
+	<!-- 特殊字符 -->
+	<!-- &nbsp;：空格 （non-breaking spacing，不断打空格）
+         &lt;：小于号<（less than）
+         &gt;：大于号>（greater than） 
+    -->
+
+	<!-- 输出<p> -->
+	使用转义字符：&lt;p&gt;
+
+	<i>斜体标记</i>
+
+	<!-- 上标sup /下标sub -->
+	O<sup>2</sup> 5<sub>3</sub>
+
+	<!-- 🌟 列表标签 -->
+
+	<!-- 无序列表 -->
+	<!-- ul：unordered list，“无序列表”的意思 -->
+	<!-- ul和li都可以设置type属性，表示原点样式 -->
+	<ul>
+		<!-- li：list item，“列表项”的意思 -->
+		<li type="disc">列表1</li>
+		<li type="square">列表2</li>
+		<li type="circle">列表3</li>
+
+		<!-- 列表还可以嵌套 -->
+		<li>
+			<b>南信大</b>
+			<ul>
+				<li>计算机科学与技术</li>
+				<li>金融工程</li>
+				<li>软件工程</li>
+			</ul>
+		</li>
+	</ul>
+
+	<!-- 有序列表 -->
+	<!-- Ordered List -->
+	<!-- type定义有序符号，start定义从哪个符号开始 -->
+	<ol type="1" start="2">
+		<li>有序1</li>
+		<li>有序2</li>
+		<li>有序3</li>
+	</ol>
+
+	<!-- 🌟 自定义列表 -->
+	<!-- definition list -->
+	<dl>
+		<!-- dd用来描述dt -->
+		<!-- definition title 列表的标题，这个标签是必须的 -->
+		<dt>列表标题</dt>
+		<!-- definition description 列表的列表项，如果不需要它，可以不加 -->
+		<dd>
+			<b>列表项1</b>
+		</dd>
+		<dd>列表项2</dd>
+		<dd>列表项3</dd>
+	</dl>
+	<dl>
+		<dt>北京</dt>
+		<dd>国家首都</dd>
+	</dl>
+
+	<!-- 表格 -->
+	<!-- 添加边框： border -->
+	<!-- 边框设置重叠：style="border-collapse:collapse;" 或者 cellspacing="0" -->
+	<table border="1" style="border-collapse: collapse" cellspacing="0" width="200" align="center">
+		<caption align="center">
+			表格标题
+		</caption>
+		<!-- 表头 -->
+		<tr>
+			<!-- 表头中的问题默认加粗并且居中显示 -->
+			<th>名字</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>地区</th>
+		</tr>
+		<!-- tr 行 -->
+		<tr align="center" height="60">
+			<!-- td 单元格 -->
+			<td>邓紫棋</td>
+			<td>31</td>
+			<td>女</td>
+			<td>香港</td>
+		</tr>
+		<tr>
+			<td>邓紫棋</td>
+			<td>31</td>
+			<td>女</td>
+			<td>香港</td>
+		</tr>
+		<tr>
+			<td>邓紫棋</td>
+			<td>31</td>
+			<td colspan="2">香港</td>
+		</tr>
+	</table>
+
+	<!-- 表单 -->
+	<!-- 表单标签用<form>表示，用于与服务器的交互。表单就是收集用户信息的，就是让用户填写的、选择的 -->
+	<!-- get / post -->
+	<form action="url地址" method="get/post" name="表单域名称">
+
+		<!-- submib button 用来提交form数据到后台 -->
+		<input type="submit" value="提交">
+
+		<!-- 表单语义化 -->
+		<fieldset>
+			<legend>Input</legend>
+			<!-- 输入标签（文本框） -->
+			<!-- type="属性值" -->
+			哈哈1：<input type="text" value="default" /><br />
+			哈哈2：<input type="text" readonly="" value="readonly" /><br />
+			哈哈3：<input type="text" disabled="" value="disabled" /><br />
+			<input type="button" value="普通按钮" />
+		</fieldset>
+
+		<fieldset>
+			<legend>Select</legend>
+			<!-- 下拉列表标签 -->
+			<select>
+				<!-- option选项 -->
+				<option value="小学">小学</option>
+				<option value="中学">中学</option>
+				<!-- selected 预选中标签 -->
+				<option value="大学" selected="">大学</option>
+			</select>
+		</fieldset>
+
+		<!-- size>1时为滚轮视图，=1时为下拉视图 -->
+		<select size="3">
+			<!-- option选项 -->
+			<option value="小学">小学</option>
+			<option value="中学">中学</option>
+			<!-- selected 预选中标签 -->
+			<option value="大学" selected="">大学</option>
+		</select>
+
+		<!-- multiple为多选 -->
+		<!-- 按住shift键进行多选操作 -->
+		<select multiple="">
+			<!-- option选项 -->
+			<option value="小学">小学</option>
+			<option value="中学" selected="">中学</option>
+			<!-- selected 预选中标签 -->
+			<option value="大学" selected="">大学</option>
+		</select>
+
+		<!-- 多行文本输入框 -->
+		<textarea name="text" id="text" cols="30" rows="10">
+				多行文本输入框
+		</textarea>
+
+		<!-- label标签 -->
+		<!-- 点击文字"男女"时也可以选中 -->
+		<!-- label for id 建立绑定关系 -->
+		<!-- 单选radio按钮需要有相同的name才可以实现多选一的效果 -->
+		<input type="radio" name="sex" id="nan" /> <label for="nan">男</label>
+		<input type="radio" name="sex" id="nv" /> <label for="nv">女</label>
+	</form>
+
+	<!-- <bgsound>标签：播放背景音乐（仅在IE中有效） -->
+	<bgsound src="王菲 - 清风徐来.mp3"></bgsound>
+
+	<!-- 播放多媒体文件（音频、视频等） -->
+	<embed src="">
+
+	<!-- 跑马灯 -->
+	<marquee behavior="scroll" direction="left" scrollamount="10">移动</marquee>
+
+</body>
+
+</html>

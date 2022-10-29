@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的显示与隐藏</title>
+
+    <style>
+        .peppa {
+            /* 🌟 1、display 显示隐藏 */
+            /* 应用非常广泛，搭配JS可以做很多的网页特效 */
+
+            /* 一对属性，分别表示隐藏 和 显示 */
+            /* display: none; 隐藏对象 */
+            /* display: block; 转换为块级元素 或者 显示对象 */
+
+            /* 隐藏元素，并且隐藏后！！不再占有原来的位置！！ visibility.gone */
+            /* 🌟 只是隐藏元素，并没有删除，查看网页源代码时还是可以看到 */
+            display: none;
+
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .george {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        .baba {
+            /* 2、visibility 显示隐藏 */
+
+            /* 一对属性，分别表示隐藏 和 显示 */
+            /* visibility: visible; 元素可见 */
+            /* visibility: hidden;  元素隐藏 */
+
+            /* 隐藏元素后，！！还是占有原来的位置！！ visibility.invisible */
+            visibility: hidden;
+
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .mama {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 本质：让一个元素在页面中隐藏或显示出来 -->
+
+    <!-- 🌟 1、display 显示隐藏 -->
+
+    <div class="peppa">佩奇</div>
+    <div class="george">乔治</div>
+
+    <!-- 2、visibility 显示隐藏 -->
+
+    <div class="baba">爸爸</div>
+    <div class="mama">妈妈</div>
+
+    <!-- 3、overflow 溢出显示隐藏 -->
+    <!-- 对溢出的部分执行显示隐藏，而非对整个元素设置显示隐藏 -->
+
+    <!-- overflow: visible (默认、超出盒子部分仍然显示) -->
+    <!-- overflow: hidden （超出盒子部分隐藏）-->
+    <!-- overflow: scroll （添加滚动条显示，无论是否溢出都显示滚动条）-->
+    <!-- overflow: auot   （自动根据内容是否溢出而显示滚动条）-->
+
+    <!-- 注意：如果有定位的盒子，我们故意想让他在外面漏出一部分，请慎用overflow:hidden 因为它会隐藏多余的部分 -->
+
+</body>
+
+</html>

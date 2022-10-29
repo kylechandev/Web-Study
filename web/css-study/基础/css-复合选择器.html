@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 把ol里面的小li选出来改成pink */
+        /* 选择父元素里面的子元素，中间使用`空格`隔开 */
+        /* 语法：元素1 元素2 元素... { 样式 } */
+        /* `元素`可以是任意的基础选择器 */
+        ol li {
+            /* 修改ol中的li的样式 */
+            color: pink;
+        }
+
+        ol li a {
+            color: red;
+            text-decoration: none;
+        }
+
+        .nav li a {
+            color: yellow;
+        }
+
+        /* 子选择器：使用`>`号隔开 */
+        .zi>a {
+            color: red;
+        }
+
+        /* 并集选择器：使用`,`号隔开 */
+        h1,
+        h2,
+        .pig li {
+            color: pink;
+        }
+
+        /* 伪类选择器 */
+        /* 使用`:`表示 */
+
+        /* 链接伪类选择器 示例 */
+        .a-weilei:link {
+            /* 未访问的链接(没有点/访问过的链接) a:link */
+            color: gray;
+            text-decoration: none;
+        }
+
+        .a-weilei:visited {
+            /* 点击/访问过的链接 a:visited */
+            color: orange;
+        }
+
+        .a-weilei:hover {
+            /* 鼠标经过时的颜色 a:hover */
+            color: skyblue;
+        }
+
+        .a-weilei:active {
+            /* 鼠标按下不松开时的颜色 a:actvie */
+            color: green;
+        }
+
+        /* :focus 伪类选择器 */
+        /* 表单input 获得光标/焦点时 */
+        input:focus {
+            background-color: pink;
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 复合选择器 -->
+    <!-- 由多个基本选择构成复合选择器 -->
+    <!-- 包括：🌟后代/包含选择器、🌟子选择器、🌟并集选择器、伪类选择器 -->
+
+    <!-- 后代选择器 例子 -->
+    <ol>
+        变态写法
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li><a href="#">我是爸爸</a></li>
+    </ol>
+
+    <ul>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我是爸爸</a></li>
+    </ul>
+
+    <ul class="nav">
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我是爸爸</a></li>
+        <li><a href="#">我是爸爸</a></li>
+        <li><a href="#">我是爸爸</a> </li>
+    </ul>
+
+    <!-- 子选择器 例子 -->
+
+    <div class="zi">
+        <!-- 离他`最近`的一个标签为亲儿子 -->
+        <a href="#">我是儿子</a>
+        <p>
+            <!-- 这个a标签离的最近的是p标签，不再是div标签了 -->
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+
+
+    <!-- 并集选择器 例子 -->
+    <!-- 可以选择多组标签，同时为他们定义相同的样式 -->
+    <h1>胸大</h1>
+    <h2>熊二</h2>
+    <span>光头强</span>
+    <ul class="pig">
+        <li>小猪佩奇</li>
+        <li>猪爸爸</li>
+        <li>猪妈妈</li>
+    </ul>
+
+
+    <!-- 伪类选择器 例子 -->
+    <!-- 用于向某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素 -->
+    <!-- 链接伪类、结构伪类 等等 -->
+
+    <a href="https://www.baidu.com" class="a-weilei">伪类选择器(百度)</a>
+
+    <br>
+    <br>
+
+    <input type="text" value="看看:forcus伪类选择器">
+
+</body>
+
+</html>

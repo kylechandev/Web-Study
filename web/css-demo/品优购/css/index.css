@@ -1,0 +1,219 @@
+/* main */
+.main {
+	width: 980px;
+	height: 455px;
+	margin-left: 220px;
+	margin-top: 10px;
+}
+
+.main .focus {
+	float: left;
+	width: 721px;
+	height: 455px;
+}
+
+.main .newsflash {
+	float: right;
+	width: 250px;
+	height: 465px;
+}
+
+.main .newsflash .news {
+	height: 165px;
+}
+
+.main .newsflash .news .news-hd {
+	height: 33px;
+	/* 留2px给border，否则会挤到下面的li */
+	line-height: 31px;
+	padding: 0px 16px;
+	border: 1px solid #e4e4e4;
+	border-bottom: 1px dotted #e4e4e4;
+}
+
+.main .newsflash .news .news-hd h3 {
+	float: left;
+}
+
+.main .newsflash .news .news-hd a {
+	float: right;
+}
+
+.main .newsflash .news .news-bd {
+	padding: 6px 16px;
+	border-width: 0px 1px 1px 1px;
+	border-color: #e4e4e4;
+	border-style: solid;
+}
+
+.main .newsflash .news .news-bd ul li {
+	height: 24px;
+	line-height: 24px;
+	/* 单行显示文本 */
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.main .newsflash .news .news-bd ul li a {
+	font-weight: 400;
+	font-size: 13px;
+	color: black;
+}
+
+.main .newsflash .news .news-bd ul li a i {
+	font-weight: 700;
+	font-size: 14px;
+	color: black;
+}
+
+.main .newsflash .lifeservice {
+	height: 209px;
+	border-left: 1px solid #e4e4e4;
+}
+
+.main .newsflash .lifeservice ul li {
+	position: relative;
+	float: left;
+	width: 25%;
+	height: 69.5px;
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	text-align: center;
+}
+
+.main .newsflash .lifeservice ul li:nth-child(2)::after {
+	content: "剑";
+	position: absolute;
+	top: 0px;
+	right: 2px;
+}
+
+.main .newsflash .lifeservice ul li i {
+	display: inline-block;
+	width: 24px;
+	height: 28px;
+	background-color: pink;
+	margin-top: 12px;
+	background: url(../images/icons.png) no-repeat -16px -15px;
+}
+
+.main .bargain {
+	margin-top: 5px;
+}
+
+/* 推荐模块 */
+.tuijian {
+	height: 163px;
+	background-color: #ebebeb;
+	margin-top: 12px;
+}
+
+.tuijian .tuijian-hd {
+	float: left;
+	width: 205px;
+	height: inherit;
+	background-color: #5a5250;
+	text-align: center;
+	padding-top: 35px;
+}
+
+.tuijian .tuijian-bd {
+	float: left;
+	background-color: pink;
+}
+
+.tuijian .tuijian-bd ul li {
+	position: relative;
+	float: left;
+}
+
+.tuijian .tuijian-bd ul li::after {
+	position: absolute;
+	right: 0px;
+	top: 10px;
+	content: "";
+	width: 1px;
+	height: 145px;
+	background-color: #ddd;
+}
+
+.tuijian .tuijian-bd ul li:last-child::after {
+	background-color: transparent;
+}
+
+.floor .jiadian .box_hd {
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 2px solid #c81623;
+}
+
+.floor .jiadian .box_hd h3 {
+	float: left;
+	font-size: 18px;
+	color: #c81623;
+}
+
+.floor .jiadian .box_hd ul {
+	float: right;
+}
+
+.floor .jiadian .box_hd .tab_list ul li {
+	float: left;
+}
+
+.floor .jiadian .box_hd .tab_list ul li a {
+	margin: 0px 6px;
+}
+
+.floor {
+	margin-top: 20px;
+}
+
+.floor .jiadian .box_bd {
+	height: 361px;
+}
+
+.floor .jiadian .box_bd .tab_content .tab_list_item > div {
+	float: left;
+	height: 361px;
+}
+
+.col_210 {
+	width: 210px;
+	background-color: #f9f9f9;
+	text-align: center;
+}
+
+.col_210 ul {
+	padding-left: 12px;
+}
+
+.col_210 ul li {
+	float: left;
+	width: 85px;
+	height: 34px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	line-height: 33px;
+	margin-right: 10px;
+}
+
+.col_221 {
+	width: 221px;
+	border-right: 1px solid #ccc;
+}
+
+.col_219 {
+	width: 219px;
+}
+
+.col_329 {
+	width: 329px;
+}
+
+.bb {
+	/* a标签有宽度的话，可以转换为block元素 */
+	display: block;
+	border-bottom: 1px solid #ccc;
+}

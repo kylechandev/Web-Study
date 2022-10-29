@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 属性选择器可以不用借助于 类 或者 id选择器 */
+        /* 必须是input，同时具有placeholder这个属性 */
+        input[placeholder] {
+            color: pink;
+        }
+
+        /* 属性选择器还可以选择属性=值的某些元素 */
+        /* 必须是input，同时type属性为password（password可以加引号也可以不加） */
+        input[type=password] {
+            color: pink;
+        }
+
+        /* 匹配以val开头的元素input */
+        /* input[type^="val"] {} */
+
+        /* 匹配以val结尾的元素input */
+        /* input[type$="val"] {} */
+
+        /* 匹配包含val的元素input */
+        /* input[type*="val"] {} */
+    </style>
+</head>
+
+<body>
+
+    <!-- CSS3新特性 - 和HTML5一样有兼容性问题 -->
+
+    <!-- CSS3新增选择器 -->
+
+    <!-- 1、属性选择器 -->
+    <!-- 属性选择器的权重 和 类/伪类选择器一样，都是10 -->
+    <input type="text" placeholder="hint">
+    <input type="password">
+
+
+    <!-- 2、结构伪类选择器 -->
+    <!-- 3、伪元素选择器 -->
+</body>
+
+</html>

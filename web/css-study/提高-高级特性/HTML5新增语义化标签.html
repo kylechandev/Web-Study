@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header,
+        nav {
+            width: 800px;
+            height: 120px;
+            border-radius: 12px;
+            background-color: pink;
+            margin: 15px auto;
+        }
+
+        section {
+            width: 500px;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        video {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- HTML5新特性 -->
+    <!-- 新特性都存在兼容性的问题，在IE9+以上版本的浏览器才支持。移动端可以放心使用 -->
+    <!-- 在IE9中，需要把这些元素转换为块级元素（因为默认不是块级的） -->
+
+    <!-- 
+        代替了
+        <div class="header"></div>
+        的写法
+        这种写法对浏览器来说是没有语义的，而使用HTML5的新特性<header>则可以提供给搜索引擎语义
+     -->
+
+
+    <header>
+        头部标签
+    </header>
+
+    <nav>
+        导航标签
+    </nav>
+
+    <article>
+        内容标签
+    </article>
+
+    <section>
+        定义文档某个区域234423423423发生的开发及咖的设计开发
+
+        <!-- 新增多媒体标签 -->
+        <!-- https://www.bilibili.com/video/BV14J4114768/?p=276 -->
+        <!-- 1、视频 video -->
+        <!-- 支持三种视频格式：mp4（尽量使用）、WebM、Ogg -->
+        <!-- 
+            autoplay        自动播放
+            muted           静音播放（chrome默认禁用自动播放，添加这个标签后就可以正常自动播放了）
+         -->
+        <video src="media/mi.mp4" autoplay="autoplay" muted="muted" loop="loop" poster="media/mi9.jpg"></video>
+
+        <!-- 2、音频 audio -->
+        <!-- 支持三种视频格式：mp3（尽量使用）、Wav、Ogg -->
+        <audio src="media/music.mp3" autoplay="autoplay" controls="controls">不会显示这里的内容</audio>
+
+    </section>
+
+    <aside>
+        侧边栏标签
+    </aside>
+
+    <footer>
+        尾部标签
+    </footer>
+
+</body>
+
+</html>

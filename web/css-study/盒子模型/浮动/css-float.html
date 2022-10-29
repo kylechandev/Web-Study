@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+
+    <style>
+        .left,
+        .right {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 所有的浮动都是贴在一起(中间不会有空隙) */
+            /* 移动到指定的一边，直到浏览器左边缘或者右边缘 或者 另一个浮动框的边缘 */
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 传统网页布局的三种方式 -->
+    <!-- 1、普通流（标准流） -->
+    <!-- 块级元素、行内元素 按照规定好的方式去排列 -->
+
+    <!-- 2、浮动 -->
+    <!-- 多个块级元素横向排列 -->
+    <!-- 属性：float -->
+    <!-- 选择器 { float: 属性值; } -->
+    <!-- none 不浮动（默认） left 向左浮动 right 向右浮动 -->
+
+    <!-- 浮动元素的特点 -->
+    <!-- 会脱离标准流，不再保留原先的位置，这个位置会让其他的标准流去占有 -->
+    <!-- 会一行内显示并且元素顶部对齐 -->
+    <!-- 会具有行内块元素的特性 -->
+
+    <div class="left">左青龙</div>
+    <div class="left">右白虎</div>
+    
+
+    <!-- 3、定位 -->
+</body>
+
+</html>

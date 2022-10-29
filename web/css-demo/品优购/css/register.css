@@ -1,0 +1,113 @@
+header {
+	height: 84px;
+	border-bottom: 2px solid #c81523;
+}
+
+.logo {
+	padding-top: 18px;
+}
+
+.main {
+	border: 1px solid gray;
+	margin-top: 20px;
+}
+
+.main-hd {
+	height: 42px;
+	line-height: 42px;
+	padding: 0px 12px;
+	background-color: lightgray;
+}
+
+.main-hd h2 {
+	float: left;
+}
+.main-hd p {
+	float: right;
+}
+
+.main-bd {
+	width: 100%;
+	/* 居中显示 */
+	text-align: center;
+	margin: 36px 0px;
+}
+
+.main-bd ul li {
+	width: 100%;
+	margin-top: 24px;
+}
+
+.main-bd ul li label {
+	display: inline-block;
+	width: 88px;
+	text-align: right;
+}
+
+.main-bd ul li input[type="text"] {
+	width: 242px;
+	height: 37px;
+	border: 1px solid #ccc;
+	padding-left: 4px;
+}
+
+.main-bd ul li em {
+	color: white;
+	background-color: #c81523;
+	padding: 1px 12px;
+}
+
+.main-bd ul li em:first-child {
+	background-color: red;
+}
+
+.main-bd ul li em:nth-child(2) {
+	background-color: green;
+}
+
+.main-bd ul li em:last-child {
+	background-color: orange;
+}
+
+.main-bd .agree input {
+	vertical-align: middle;
+}
+
+.main-bd .agree a {
+	color: blue;
+}
+
+.main-bd ul li input[type="submit"] {
+	width: 200px;
+	height: 34px;
+	color: white;
+	border-radius: 12px;
+	background-color: #c81523;
+	margin-top: 16px;
+}
+
+.error {
+	color: red;
+}
+
+.success {
+	color: green;
+}
+
+.error_icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	background: url(../images/error.png) no-repeat;
+	margin: 0px 6px;
+}
+
+.success_icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	background: url(../image/.success.png) no-repeat;
+	margin: 0px 6px;
+}

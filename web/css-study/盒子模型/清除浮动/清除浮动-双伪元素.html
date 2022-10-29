@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>为什么需要清除浮动</title>
+
+    <style>
+        /* 清除浮动：双伪元素（两边都生成一个元素） */
+        .clearfix:before,
+        .clearfix:after {
+            content: '';
+            /* 因为伪元素默认为行内元素，而清除浮动必须是要块级元素 */
+            /* 而由于我们这里在前后分别插入了一个伪元素，如果都转换为块级元素，那么就会分成两行显示 */
+            /* 所以使用 display: table 把这两个盒子放在一行里 */
+            /* display: table 转换为块级元素，并且让before和after一行显示 */
+            /* 转换表格后，如果表格不指定宽高和边框并且也没有内容，默认是看不见的，所以不见隐藏元素的那两行代码 */
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+
+        /* 不指定父盒子的高度！让高度自适应子盒子的内容高度（默认的） */
+        .box {
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        /* 浮动的元素是不占有位置的 */
+        /* 这样就会导致父盒子无法识别子内容自适应高度 */
+        /* 🌟 解决办法就是：🌟清除浮动🌟 */
+        /* 清除浮动的本质：*/
+        /* 清除浮动元素造成的影响 */
+        /* 如果父盒子有高度，则不需要清除浮动 */
+        /* 清除浮动后，父级就会根据浮动的盒子自动检测高度，父级有了高度，就不会影响下面的标准流了 */
+        .damao {
+            float: left;
+            /* 清除浮动 clear: left right both */
+            /* 清除浮动的策略：闭合浮动（在父级盒子范围内浮动） */
+            /* clear: both; */
+
+            /* 清除浮动的方法 */
+            /* 1、额外标签，也称为隔墙法 */
+            /* 2、父级添加overflow属性 */
+            /* 3、父级添加after伪元素 */
+            /* 4、父级添加双伪元素 */
+
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .xiaomao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box clearfix">
+        <div class="damao">大猫</div>
+        <div class="xiaomao">小猫</div>
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+
+</html>

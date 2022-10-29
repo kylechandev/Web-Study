@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3盒子模型</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* border 和 padding 会导致盒子变大 */
+            border: 20px solid red;
+            padding: 15px;
+            /* 默认、盒子大小 = width + padidng + border */
+            box-sizing: content-box;
+        }
+
+        .div2 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* border 和 padding 会导致盒子变大 */
+            border: 20px solid red;
+            padding: 15px;
+            /* 盒子大小 = width */
+            /* 这种做法就不用在处理宽度减去padding和border了，不会撑大盒子了 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        小猪乔治
+    </div>
+
+    <br>
+
+    <div class="div2">
+        小猪乔治
+    </div>
+</body>
+
+</html>

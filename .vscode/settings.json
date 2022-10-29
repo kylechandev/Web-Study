@@ -1,0 +1,9 @@
+{
+  "open-in-browser.default": "chrome",
+
+  /*  prettier的配置 */
+  "prettier.printWidth": 150, // 超过最大值换行
+  "prettier.tabWidth": 2, // Tab缩进字节数
+  "prettier.useTabs": true, // 使用Tab
+  "prettier.semi": true // 句尾添加分号
+}

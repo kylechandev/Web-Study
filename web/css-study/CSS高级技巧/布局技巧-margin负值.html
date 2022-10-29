@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            float: left;
+            list-style: none;
+            width: 150px;
+            height: 200px;
+            border: 1px solid red;
+            /* 默认会有重叠问题，两个边框堆叠在一起会导致变粗(2px) */
+            /* 添加-1px来压住前面一个盒子 */
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+
+        ul li:hover {
+            /* 只设置这个的话，由于后一个盒子会压住前一个盒子，会导致不是四条边都改为这个新的颜色 */
+            border: 1px solid blue;
+
+            /* 解决办法1：如果盒子没有定位，则鼠标经过时添加相对定位，相对定位会压住其他的标准流或者浮动的盒子 */
+            position: relative;
+            /* 解决办法2：如果盒子有定位，则添加z-index来提高层级 */
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+
+</html>

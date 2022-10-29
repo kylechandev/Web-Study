@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 选择ul里面的第一个孩子 */
+        /* E:first-child */
+        ul li:first-child {
+            background-color: pink;
+        }
+
+        /* 选择ul里面的最后一个孩子 */
+        /* E:last-child */
+        ul li:last-child {
+            background-color: red;
+        }
+
+        /* 选择ul里面的第N个孩子 */
+        /* E:nth-child(n) */
+        /* n可以是数字，表示第几个孩子 */
+        /* n也可以是关键词，例如`even`，表示选择所有偶数的孩子，`odd`表示奇数 */
+        /* n也可以是公式， */
+        ul li:nth-child(even) {
+            background-color: blue;
+        }
+
+        /* nth-child(n) 从0开始 每次加1 往后面计算 必须是n 不能是其他数字 超出部分自动忽略 相当于选择了所有的孩子 */
+        ol li:nth-child(n) {
+            background-color: pink;
+        }
+
+        /* 其他公式 */
+        /* 2n       偶数                        */
+        /* 2n+1     奇数                        */
+        /* 5n       5 10 15 ...                */
+        /* n+5      从第5个开始（包含第五个）到最后 */
+        /* -n+5     前5个（包含第5个）            */
+
+
+
+        /* E:first-of-type */
+        /* 指定类型E的第一个 */
+        dl dt:first-of-type {
+            background-color: pink;
+        }
+
+        /* E:last-of-type */
+        /* 指定类型E的最后一个 */
+        dl dt:last-of-type {
+            background-color: pink;
+        }
+
+        /* E:nth-of-type(n) */
+        /* 指定类型E的第N个 */
+        dl dt:nth-of-type(3) {
+            background-color: pink;
+        }
+
+
+
+        /* 区别 */
+
+        /* 
+            假设当前html是：
+              <section>
+                 <p>1</p>
+                 <div>2</div>
+                 <div>3</div>
+              </section>
+         */
+
+        /* nth-child 会把所有的盒子都排列序号 */
+        /* 执行的时候首先看 :nth-child(1) 之后回去看 前面的div */
+        section div:nth-child(1) {
+            /* 没有任何效果 */
+            /* 总结：先找第n个孩子，再从这个孩子中找类型 */
+            background-color: pink;
+        }
+
+        /* nth-of-type 会把指定元素的盒子排列序号 */
+        /* 执行的时候首先看 div指定的元素 之后回去看 :nth-of-type(1) 第几个孩子 */
+        section div:nth-of-type(1) {
+            /* 第一个div添加了背景色 */
+            /* 总结：先找指定的类型的孩子，再找第n个 */
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CSS3新特性 结构伪类选择器 -->
+
+    <ul>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+
+    <ol>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ol>
+
+    <dl>
+        <dt>1</dt>
+        <dt>2</dt>
+        <dt>3</dt>
+        <dt>4</dt>
+        <dt>5</dt>
+    </dl>
+
+</body>
+
+</html>

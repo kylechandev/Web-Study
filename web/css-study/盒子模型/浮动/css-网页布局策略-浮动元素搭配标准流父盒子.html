@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动元素搭配标准流父盒子</title>
+
+    <style>
+        .box {
+            width: 1200px;
+            height: 460px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .left {
+            width: 230px;
+            height: 460px;
+            background-color: purple;
+            float: left;
+        }
+        
+        .right {
+            width: 970px;
+            height: 460px;
+            background-color: skyblue;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 网页布局的一般策略 -->
+    <!-- 先用标准流的父元素排列上下位置，内部的子元素采用浮动排列左右位置，符合网页布局的第一准则 -->
+    <div class="box">
+        <div class="left">
+            左侧
+        </div>
+        <div class="right">
+            右侧
+        </div>
+    </div>
+
+
+</body>
+
+</html>

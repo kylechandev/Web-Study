@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重</title>
+
+    <style>
+        .nav {
+            color: red;
+        }
+
+        /* 继承的权重是0 */
+        li {
+            color: pink;
+        }
+
+        .nav li {
+            color: red;
+        }
+
+        /* 权重可以叠加 */
+        .nav .pink {
+            color: pink;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="nav">
+        <li class="pink">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+</body>
+
+</html>

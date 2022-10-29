@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体验CSS语法规范</title>
+
+    <!-- css样式一般写在head中 -->
+    <style>
+        /* 选择器 { 样式 } */
+        /* 给谁改样式 { 改什么样式 } */
+        p {
+            color: royalblue;
+            /* 修改文字大小 */
+            font-size: 12px;
+        }
+
+        /* 🌟 选择器分为基础选择器和复合选择器 */
+        /* 基础选择器是由单个选择器组成的 */
+        /* 基础选择器包括：标签选择器、类选择器、id选择器、通配符选择器 */
+
+        /* 标签选择器：为页面中所有相同的标签统一设置样式，缺点是不能单独设置 */
+        div {
+            color: pink;
+        }
+
+        /* 类选择器：单独设置一个或某几个标签 */
+        /* 语法：.类名 { 样式 } */
+        .font-blue {
+            color: blue;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .redBg {
+            background-color: red;
+        }
+
+        .blueBg {
+            background-color: blue; 
+        }
+
+        /* id选择器：为标有特定id的HTML元素指定特定的样式，其他id不能调用（id页面唯一） */
+        /* 语法：#id名 { 样式 } */
+        /* 一般和js搭配使用 */
+
+        /* class选择器：好比人的名字，一个人可以有多个名字，多个人也可以叫同一个名字 */
+        /* id选择器：好比人的身份证号码，全局唯一不重复 */
+        /* 两者区别在于：使用次数上，class可以让多个标签调用，而id选择器只有特定唯一标签可以使用 */
+        /* 通常class选择器使用的比较多 */
+
+        #font-purple {
+            color: purple;
+        }
+
+        /* 通配符选择器：表示选取页面中所有元素（标签） */
+        /* 语法：* { 样式 } */
+        /* 标签不用任何设置，只需要在这里定义好样式就行 */
+        /* 如果某个标签已经定义好标签选择器/类选择器/id选择器，那么就会忽视这个通配符选择器的样式 */
+        * {
+            color: aquamarine;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>有点意思</p>
+    <div>div1</div>
+    <div class="font-blue">div2</div>
+
+    <div class="redBg">红色</div>
+    <div class="blueBg">蓝色</div>
+    <div class="redBg">红色</div>
+
+    <br>
+
+    <!-- 类选择器 - 多类名 -->
+    <!-- 为一个标签指定多个类名，多个类名之间使用`空格`分开 -->
+
+    <div class="box redBg font-blue">多类名</div>
+
+    <br>
+
+    <!-- id选择器 -->
+    <div id="font-purple">邓紫棋</div>
+
+    <h2>通配符选择器</h2>
+</body>
+
+</html>

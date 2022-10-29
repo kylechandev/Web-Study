@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框</title>
+
+    <style>
+        .circle {
+            /* 宽高相同 */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 设置成高宽的一半即可实现圆形 */
+            border-radius: 50%;
+        }
+        
+        .rectangle {
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            /* 设置成高度的一半即可实现圆角矩形 */
+            border-radius: 50px;
+        }
+
+        .radius { 
+            width: 300px;
+            height: 150px;
+            background-color: pink;
+            /* 设置边框的圆角 */
+            /* 可以有4个值，分别代表左上角、右上角、右下角、左下角 */
+            /* 如果只设置一个值，表示四个角度的圆角都是一样的 */
+            border-radius: 10px 20px 30px 40px;
+        }
+    </style>
+</head>
+
+<body>
+    圆形
+    <div class="circle"></div>
+    圆角矩形
+    <div class="rectangle"></div>
+    设置四个角不同的圆角
+    <div class="radius"></div>
+</body>
+
+</html>

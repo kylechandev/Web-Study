@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>为什么需要清除浮动</title>
+
+    <style>
+        /* 不指定父盒子的高度！让高度自适应子盒子的内容高度（默认的） */
+        .box {
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .clearfix {
+            /* IE6、7 专有 */
+            *zoom: 1;
+        }
+
+        /* 🌟 伪元素:after解决清除浮动 */
+        /* clearfix名字随意写，建议使用clearfix */
+        /* 单冒号是为了兼容IE8浏览器，浏览器在解析这里的时候会自动转换为双冒号 */
+        .clearfix:after {
+            /* after伪元素里面必须有content属性 */
+            content: '';
+            /* 转换为块级元素，因为这个伪元素默认的是行内元素 */
+            display: block;
+            /* 清除浮动 核心代码 */
+            clear: both;
+            /* 不想让他显示出来 */
+            height: 0;
+            visibility: hidden;
+        }
+
+
+        /* 浮动的元素是不占有位置的 */
+        /* 这样就会导致父盒子无法识别子内容自适应高度 */
+        /* 🌟 解决办法就是：🌟清除浮动🌟 */
+        /* 清除浮动的本质：*/
+        /* 清除浮动元素造成的影响 */
+        /* 如果父盒子有高度，则不需要清除浮动 */
+        /* 清除浮动后，父级就会根据浮动的盒子自动检测高度，父级有了高度，就不会影响下面的标准流了 */
+        .damao {
+            float: left;
+            /* 清除浮动 clear: left right both */
+            /* 清除浮动的策略：闭合浮动（在父级盒子范围内浮动） */
+            /* clear: both; */
+
+            /* 清除浮动的方法 */
+            /* 1、额外标签，也称为隔墙法 */
+            /* 2、父级添加overflow属性 */
+            /* 3、父级添加after伪元素 */
+            /* 4、父级添加双伪元素 */
+
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .xiaomao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box clearfix">
+        <div class="damao">大猫</div>
+        <div class="xiaomao">小猫</div>
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+
+</html>

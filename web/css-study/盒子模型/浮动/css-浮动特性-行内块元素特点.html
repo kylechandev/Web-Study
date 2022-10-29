@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 任何元素都可以设置浮动，不管原先是什么模式的元素，添加浮动之后都具有了行内块元素相似的特性 */
+        span,
+        div {
+            /* span元素是行内元素，设置宽高是无效的 */
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* 添加float后，span自动转换为行内块元素了 */
+            float: left;
+        }
+
+        /* 如果行内元素有了float浮动，则不需要转换行内块元素就可以直接设置宽度和高度了 */
+        p {
+            height: 200px;
+            background-color: purple;
+            /* p的默认宽度是100% */
+            /* 添加float属性后，成为行内块元素特性，宽度变为内容的宽度 */
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <span>1</span>
+    <span>2</span>
+
+    <div>div</div>
+    <!-- 块级元素p -->
+    <p>p</p>
+</body>
+
+</html>

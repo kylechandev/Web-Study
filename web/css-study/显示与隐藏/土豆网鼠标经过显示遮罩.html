@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .tudou {
+            position: relative;
+            width: 444px;
+            height: 320px;
+            background-color: pink;
+            margin: 30px auto;
+        }
+
+        .tudou img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 隐藏遮罩层 */
+        /* .mask { */
+        .tudou::before {
+            /* 伪元素选择器 */
+            content: '';
+
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .4) url(images/arr.png) no-repeat center;
+        }
+
+        /* 当鼠标经过tudou时，让mask显示出来 */
+        /* .tudou:hover>.mask { */
+        /* 当鼠标经过tudou时，让里面的before遮罩层显示出来 */
+        .tudou:hover::before {
+            /* 这里表示显示元素的意思 */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tudou">
+        <img src="images/tudou.jpg" alt="">
+        <!-- <div class="mask"></div> -->
+    </div>
+
+</body>
+
+</html>

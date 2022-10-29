@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1 {
+            width: 60px;
+            height: 60px;
+
+            margin: 10px auto;
+            background: url(images/sprites.png) no-repeat -182px 0px;
+        }
+
+        .box2 {
+            width: 27px;
+            height: 25px;
+            background: url(images/sprites.png) no-repeat -155px -106px;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        .name1 {
+            width: 100px;
+            height: 120px;
+            background: url(images/abcd.jpg) no-repeat -240px 0px;
+        }
+        .name2 {
+            width: 120px;
+            height: 130px;
+            background: url(images/abcd.jpg) no-repeat -495px -140px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 使用精灵图的目的 -->
+    <!-- 有效的减少服务器接受和发送请求的次数，提高页面的加载速度 -->
+    <!-- 一般都是背景图片 或者 小图标 -->
+
+    <!-- 精灵图核心 -->
+    <!-- 将多个小背景图片整合到一张大图中 -->
+    <!-- 这个大图片也称为sprites 精灵图 -->
+    <!-- 移动背景图片位置，此时可以使用backgrou-position -->
+    <!-- 移动的距离就是这个目标图片的x和y坐标 -->
+    <!-- 一般情况下都是往上往左移动，所以数值是负数 -->
+    <!-- 需要精确测量，每个小背景图片的大小和位置 -->
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <span class="name1">c</span>
+    <span class="name2">k</span>
+</body>
+
+</html>

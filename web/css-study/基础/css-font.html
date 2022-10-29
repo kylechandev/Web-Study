@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS字体属性之字体系列</title>
+
+    <style>
+        h2 {
+            font-family: "微软雅黑";
+        }
+
+        p {
+            /* 设置多个字体时，会依次寻找电脑支持的字体来显示 */
+            font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+            /* 字体大小 chrome默认显示的字体大小为16px */
+            font-size: 20px;
+            /* 字体样式：正常、斜体 */
+            font-style: italic;
+            /* 字体的粗细 */
+            font-weight: 700;
+            /* 复合属性 */
+            /* 必须严格符合顺序：font: font-style font-weight font-size/line-height font-family; */
+            /* font-size 和 font-family 必须设置，其他可省略 */
+            font: normal 700 16px '微软雅黑';
+        }
+
+        /* 统一设置页面的字体大小 */
+        /* 注意：标题标签比较特殊，需要单独指定字体大小 */
+        body {
+            font-size: 16px;
+        }
+
+        .bold {
+            font-weight: bold;
+            /* 后面不用跟单位，实际开发中，更加提倡使用数字，表示加粗或者变细 */
+            font-weight: 800;
+        }
+
+        .text-align {
+            /* 设置文本的对齐方式（只能设置水平方向的对齐方式），默认左对齐 */
+            text-align: center;
+        }
+
+        .text-decoration {
+            /* 设置装饰文本 */
+            /* none underline overline line-through */
+            text-decoration: underline;
+        }
+
+        a {
+            /* 取消a标签默认的下划线 */
+            text-decoration: none;
+            color: #333;
+        }
+
+        .text-indent {
+            /* 设置首行缩进效果 */
+            /* text-indent: 20px; */
+            /* em表示一个文字的大小 */
+            text-indent: 2em;
+        }
+
+        .line-height {
+            /* 设置行间距（上间距+文本高度+下间距） */
+            line-height: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>pink的秘密</h2>
+    <p>饭卡上岛咖啡就开始点击付款</p>
+    <p class="bold">科技开发点击付款哦</p>
+
+    <p class="text-align">水平对其文本 text-align</p>
+    <p class="text-decoration">装饰文本(下划线) text-decoration</p>
+
+    <a href="">链接测试（无下划线）</a>
+
+    <p class="text-indent">文本缩进text-indent</p>
+    <p class="line-height">行间距line-height\n33</p>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!-- HTML5详解 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- IE8 及以下版本的浏览器不支持 H5 和 CSS3。解决办法：引入html5shiv.js文件。 -->
+    <!--  条件注释 只有ie能够识别-->
+    <!--[if lte ie 8]>
+        <script src="html5shiv.min.js"></script>
+    <![endif]-->
+
+    <input type="text" list="myData">
+    <!-- <datalist> 数据列表： -->
+    <!-- input里的list属性和 datalist 进行了绑定 -->
+    <!-- 数据列表输入时可以自动提示 -->
+    <datalist id="myData">
+        <option>本科</option>
+        <option>研究生</option>
+        <option>不明</option>
+    </datalist>
+
+</body>
+
+</html>

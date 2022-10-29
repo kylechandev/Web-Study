@@ -1,0 +1,45 @@
+<!-- CSS引入方式 -->
+<!-- 1、行内样式表（行内式） -->
+
+<!-- 2、内部样式表（嵌入式） -->
+<!-- 写在html文件中head标签内部的style标签内 -->
+<!-- style标签理论上可以放在html文档的任何地方，但一般会放在文档的head标签中 -->
+
+<!-- 3、外部样式表（链接式）（推荐使用） -->
+<!-- 在外部单独建立一个css文件 -->
+<!-- ① 建立单独的css文件 -->
+<!-- ② 在html文件中使用link标签引入这个css文件 -->
+
+<!-- 优先级 -->
+<!-- 内部 > 外部 > 行内 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS引入方式</title>
+
+    <!-- 建立和css文件的链接 -->
+    <!-- rel = relationship的缩写，表示联系 -->
+    <!-- rel="stylesheet" 表示 引入的是 样式表 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <p>夏天夏天</p>
+    <p>春天春天</p>
+    <p>冬天冬天</p>
+    <!-- 行内样式表 -->
+    <!-- 在标签内部直接定义style属性的CSS样式 -->
+    <!-- 修改样式比较简单的时候可以这样做 -->
+    <p style="color: pink;">秋天秋天</p>
+
+    <div>来呀～快活呀，反正有大把时间...</div>
+
+</body>
+
+</html>
