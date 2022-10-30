@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            /* 父级添加flex属性 */
+            display: flex;
+            width: 600px;
+            height: 300px;
+            background-color: pink;
+
+            /* flex-direction: row row-reverse column column-reverse */
+            /* 默认的主轴是x轴（行） */
+            /* flex-direction: row; */
+            /* 设置主轴为y轴（列） */
+            flex-direction: column;
+
+            /* 把y轴设置为主轴后，x设置成为侧轴 */
+        }
+
+        div span {
+            width: 50px;
+            height: 50px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 对父元素设置 -->
+    <!-- 🌟 flex-direction 设置主轴的方向 -->
+
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+
+</body>
+
+</html>

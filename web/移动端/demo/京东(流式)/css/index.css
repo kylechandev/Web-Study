@@ -1,0 +1,244 @@
+.clearfix:after {
+	content: "";
+	display: block;
+	line-height: 0;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+
+body {
+	width: 100%;
+	min-width: 320px;
+	max-width: 640px;
+	margin: 0px auto;
+	font-size: 14px;
+	font-family: -apple-system, "Helvetica Neue", sans-serif;
+	color: #666;
+	line-height: 1.5;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+img {
+	/* 去除图片底部的空白缝隙（middle 或者 top 都行） */
+	vertical-align: middle;
+}
+
+.open_app {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+}
+
+.open_app ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+.open_app ul li {
+	float: left;
+	background-color: #333;
+	text-align: center;
+	color: white;
+}
+
+.open_app ul li:nth-child(1) {
+	width: 8%;
+}
+
+.open_app ul li:nth-child(1) img {
+	width: 10px;
+	height: 10px;
+	vertical-align: middle;
+}
+
+.open_app ul li:nth-child(2) {
+	width: 10%;
+}
+
+.open_app ul li:nth-child(2) img {
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+
+.open_app ul li:nth-child(3) {
+	width: 57%;
+}
+
+.open_app ul li:nth-child(4) {
+	width: 25%;
+	background-color: #f63515;
+}
+
+.title {
+	/* relative 还是占有原来的位置 */
+	/* position: relative; */
+	/* fixed 不占有原来的位置（加了fixed的盒子一定要给宽度） */
+	position: fixed;
+	width: 100%;
+	height: 45px;
+	overflow: hidden;
+	line-height: 45px;
+	text-align: center;
+	min-width: 320px;
+	max-width: 640px;
+}
+
+.title .menu {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 40px;
+	height: inherit;
+}
+
+.title .menu img {
+	width: 20px;
+	height: 18px;
+	margin-left: 8px;
+	margin-bottom: 2px;
+	vertical-align: middle;
+}
+
+.title .search {
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	background-color: #fff;
+	margin: 0px 50px;
+	border-radius: 15px;
+	/* text-align: center; */
+	/* 会有外边距合并的问题，解决的办法是在父盒子添加overflow: hidden */
+	margin-top: 7px;
+}
+
+.title .search .jd-icon {
+	position: absolute;
+	top: 8px;
+	left: 12px;
+	width: 20px;
+	height: 15px;
+	background: url(../images/jd.png) no-repeat;
+	background-size: 20px 15px;
+}
+
+.title .search .jd-icon::after {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: -8px;
+	display: block;
+	width: 1px;
+	height: 15px;
+	background-color: #ccc;
+}
+
+.title .search .search-icon {
+	position: absolute;
+	top: 8px;
+	left: 45px;
+	width: 18px;
+	height: 15px;
+	/* 精灵图也有二倍的关系，需要先缩放原来的精灵图再测位置 */
+	background: url(../images/jd-sprites.png) no-repeat -81px 0px;
+	background-size: 200px auto;
+}
+
+.title .search input[type="text"] {
+	position: absolute;
+	top: 6px;
+	left: 70px;
+	display: inline-block;
+	height: 20px;
+	width: 60%;
+	line-height: 15px;
+	/* 取消边框 */
+	border-style: none;
+	background-color: transparent;
+	/* 取消高亮 */
+	outline: none;
+	font-size: 14px;
+}
+
+.title .login {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 40px;
+	height: inherit;
+	line-height: 44px;
+	text-align: center;
+	margin-right: 4px;
+}
+
+.title .login a {
+	color: white;
+}
+
+.main .slider img {
+	width: 100%;
+}
+
+.main .brand {
+	border-radius: 12px 12px 0px 0px;
+	/* 实现切图（让多余的部分不显示） */
+	overflow: hidden;
+}
+
+.main .brand div {
+	float: left;
+	width: 33.33%;
+}
+
+.main .brand div img {
+	width: 100%;
+}
+
+.main nav a {
+	float: left;
+	width: 20%;
+	text-align: center;
+	margin-top: 12px;
+}
+
+.main nav a img {
+	width: 35px;
+	height: 35px;
+}
+
+.main nav span {
+	display: block;
+	margin-top: 2px;
+	font-size: 12px;
+}
+
+.main .news {
+	/* 需要为news模块上面的nav模块添加clearfix清除浮动后才有效 */
+	margin-top: 15px;
+}
+
+.main .news a {
+	float: left;
+	box-sizing: border-box;
+}
+
+.main .news a img {
+	/* 图片宽度占a的100% */
+	width: 100%;
+}
+
+.main .news a:nth-child(1) {
+	width: 50%;
+}
+
+.main .news a:nth-child(2),
+.main .news a:nth-child(3) {
+	width: 25%;
+	border-left: 1px solid #ccc;
+}

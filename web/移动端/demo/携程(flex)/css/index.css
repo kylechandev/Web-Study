@@ -1,0 +1,326 @@
+body {
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+	color: #000;
+	background: #f2f2f2;
+	overflow-x: hidden;
+	-webkit-tap-highlight-color: transparent;
+}
+
+ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+.search {
+	/* 固定定位：以屏幕为准 */
+	position: fixed;
+	top: 0px;
+
+	/* 设置定位后，margin: 0px auto; 就失效了； */
+	/* 需要使用定位的方式设置居中： */
+	left: 50%;
+	/* CSS3的方式 */
+	transform: translateX(-50%);
+	/* 兼容性写法 */
+	-webkit-transform: translateX(-50%);
+
+	/* flex 布局 */
+	display: flex;
+
+	/* 居中显示 */
+	align-items: center;
+
+	width: 100%;
+	height: 45px;
+	min-width: 320px;
+	max-width: 640px;
+
+	background-color: #f6f6f6;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.search .search-area {
+	position: relative;
+	flex: 1;
+
+	height: 26px;
+	line-height: 26px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 0px 10px;
+
+	font-size: 12px;
+	color: #666;
+
+	padding-left: 22px;
+
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search .search-area::before {
+	content: "";
+	/* display: block; */
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 15px;
+	height: 15px;
+	background: url(../images/sprite.png) no-repeat -59px -279px;
+	background-size: 104px auto;
+	margin: 5px;
+}
+
+.search .search-area input {
+	outline: none;
+	border-style: none;
+	background-color: transparent;
+}
+
+.search .user {
+	width: 44px;
+	height: 44px;
+	font-size: 12px;
+	text-align: center;
+	color: #2eaae0;
+}
+
+.search .user {
+	text-decoration: none;
+}
+
+.search .user::before {
+	content: "";
+	/* 设置伪元素为block元素，实现换行的效果 */
+	display: block;
+	width: 23px;
+	height: 23px;
+	background: url(../images/sprite.png) no-repeat -59px -194px;
+	background-size: 104px auto;
+	margin: 2px auto 0px;
+}
+
+.banner {
+	margin-top: 45px;
+}
+
+.banner img {
+	width: 100%;
+	min-width: 320px;
+	max-width: 640px;
+}
+
+.item ul {
+	display: flex;
+	height: 64px;
+	margin: 3px 4px;
+	background-color: white;
+	border-radius: 12px;
+}
+
+.item ul li {
+	flex: 1;
+}
+
+.item ul li a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 12px;
+}
+
+.item ul li a span[class^="nav-item-icon"] {
+	width: 32px;
+	height: 32px;
+	margin-top: 8px;
+	background: url(../images/localnav_bg.png) no-repeat 0px 0px;
+	background-size: 32px auto;
+}
+
+.item ul li:nth-child(2) a span:nth-child(1) {
+	background-position: 0 -32px;
+}
+
+.item ul li:nth-child(3) a span:nth-child(1) {
+	background-position: 0 -64px;
+}
+
+.item ul li:nth-child(4) a span:nth-child(1) {
+	background-position: 0 -96px;
+}
+
+.item ul li:nth-child(5) span:nth-child(1) {
+	background-position: 0 -128px;
+}
+
+.main {
+	overflow: hidden;
+	border-radius: 8px;
+	margin: 0px 4px 3px;
+}
+
+.main .main-common {
+	display: flex;
+
+	height: 88px;
+	background-color: pink;
+}
+
+.main .main-common .main-item {
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.main .main-common .main-item a {
+	flex: 1;
+	text-align: center;
+	line-height: 44px;
+	font-size: 14px;
+	color: white;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.main .main-common .main-item a:first-child {
+	border-bottom: 1px solid white;
+}
+
+.main .main-common .main-item:nth-child(1) a {
+	border: 0;
+	background: url(../images/hotel.png) no-repeat bottom center;
+	background-size: 121px auto;
+}
+
+/* 前两个加右边框 */
+.main .main-common .main-item:nth-child(-n + 2) {
+	border-right: 1px solid white;
+}
+
+.main .main-common:nth-child(2) {
+	margin: 3px 0px;
+}
+
+.main .main-common:nth-child(1) {
+	background: -webkit-linear-gradient(left, #fa5a55, #fa994d);
+}
+
+.main .main-common:nth-child(2) {
+	background: -webkit-linear-gradient(left, #4b90ed, #53bced);
+}
+
+.main .main-common:nth-child(3) {
+	background: -webkit-linear-gradient(left, #34c2a9, #6cd559);
+}
+
+.menu ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	border-radius: 12px;
+	background-color: white;
+	overflow: hidden;
+	padding: 12px;
+}
+
+.menu ul li {
+	/* 里面的子盒子可以写 % 相对于父级 */
+	flex: 20%;
+}
+
+.menu ul li a {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+
+	text-align: center;
+}
+
+.menu ul li a span[class="menu-icon"] {
+	width: 28px;
+	height: 28px;
+	background: url(../images/subnav-bg.png) no-repeat 0px 0px;
+	background-size: 28px auto;
+	margin-top: 8px;
+}
+
+/* sales-box */
+
+.sales-box {
+	border-top: 1px solid #bbb;
+	background-color: #fff;
+	margin: 4px;
+}
+
+.sales-hd {
+	position: relative;
+	height: 44px;
+	border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h2 {
+	position: relative;
+	text-indent: -999px;
+	overflow: hidden;
+}
+
+.sales-hd h2::after {
+	position: absolute;
+	top: 5px;
+	left: 8px;
+	content: "";
+	width: 79px;
+	height: 15px;
+	background: url(../images/hot.png) no-repeat 0 -20px;
+	background-size: 79px auto;
+}
+
+.more {
+	position: absolute;
+	right: 5px;
+	top: 0px;
+	background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+	border-radius: 15px;
+	padding: 3px 20px 3px 10px;
+	color: #fff;
+}
+
+.more::after {
+	content: "";
+	position: absolute;
+	top: 9px;
+	right: 9px;
+	width: 7px;
+	height: 7px;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(45deg);
+}
+
+.row {
+	display: flex;
+}
+
+.row a {
+	flex: 1;
+	border-bottom: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+	border-right: 1px solid #eee;
+}
+
+.row a img {
+	width: 100%;
+}
