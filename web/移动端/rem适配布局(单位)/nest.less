@@ -1,0 +1,24 @@
+// less嵌套
+
+.header {
+    // less支持算术运算 + - * /
+    width: 200px + 20px;
+    height: 200px;
+    background-color: pink;
+
+    // .header .a {} 
+    // less嵌套：支持子元素的样式直接写在父元素里面
+    a {
+        color: red;
+
+        // 伪元素嵌套使用
+        // 需要在前面加上 & 符号
+        &:hover {
+            color: pink;
+        }   
+
+        &::before{
+            content: "";
+        }
+    }
+}

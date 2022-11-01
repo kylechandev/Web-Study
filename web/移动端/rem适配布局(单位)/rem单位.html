@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 设置最大的根html元素 */
+        html {
+            /* 缺点是直接写死了，不能根据不同屏幕宽度设置 */
+            font-size: 14px;
+        }
+
+        div {
+            font-size: 12px;
+        }
+
+        p {
+            /* em是相对于`父元素`的`文字大小`来决定的 */
+            /* 这里等于 120px */
+            width: 10em;
+            height: 10em;
+
+            /* rem和em相同，不同的是他根据最大的根元素html的文字大小来决定 */
+            /* 这里等于 140px */
+            width: 10rem;
+
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+</body>
+
+</html>

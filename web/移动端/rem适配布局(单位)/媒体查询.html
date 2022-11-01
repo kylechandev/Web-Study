@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 这句话的意思就是： 在我们屏幕上 并且 最大的宽度是 800像素 设置我们想要的样式 */
+        /* max-width 小于等于800 */
+        /* 媒体查询可以根据不同的屏幕尺寸在改变不同的样式 */
+
+        /* @media 是 CSS3 的新特性 */
+
+        /* @media 媒体类型(all print screen) 关键字(and not only) */
+
+        @media screen and (max-width: 539px) {
+            body {
+                background-color: blue;
+            }
+        }
+        /* 3. 540 ~ 970 我们的页面颜色改为 绿色 */
+        /* @media screen and (min-width: 540px) and (max-width: 969px) {
+            body {
+                background-color: green;
+            }
+        } */
+        
+        @media screen and (min-width: 540px) {
+            body {
+                background-color: green;
+            }
+        }
+        /* 4. 大于等于970 我们页面的颜色改为 红色 */
+        
+        @media screen and (min-width: 970px) {
+            body {
+                background-color: red;
+            }
+        }
+        /* 5. screen 还有 and 必须带上不能省略的 */
+        /* 6. 我们的数字后面必须跟单位  970px   这个 px 不能省略的 */
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

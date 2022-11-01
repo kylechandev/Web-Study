@@ -1,0 +1,14 @@
+.header {
+  width: 220px;
+  height: 200px;
+  background-color: pink;
+}
+.header a {
+  color: red;
+}
+.header a:hover {
+  color: pink;
+}
+.header a::before {
+  content: "";
+}
